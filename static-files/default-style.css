@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    --container-bgcolor: #fdfdfd;
+    --footer-bgcolor: #f8f8f8;
+    --container-border-color: #e8e8e8;
+    --font-color: rgb(26, 26, 26);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Trick for no whitespace on right on phone */
+html,body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body {
+    background: #fdfdfd;
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-container {
+    flex: auto;
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0;
+
+    background-color: var(--container-bgcolor);
+    border-top: 5px solid rgb(63, 63, 63);
+    border-bottom: 1px solid var(--container-border-color);
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-offset {
+    width: 100%;
+    height: 63.38px;
+}
+
+.nav-item {
+    flex: auto;
+    padding: 0.7em;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 16px;
+}
+
+.nav-item a:hover {
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.article-container {
+    display: block;
+    margin: 2em;
+    width: 100%;
+    height: 400px;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #e8e8e8;
+    background-color: #f8f8f8;
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.social-media-container {
+    flex: auto;
+    flex-direction: row;
+    margin-left: 18vw;
+}
+
+.social-media-container a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.social-media-container a:hover {
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px
+}
+
+.social-media-item {
+    margin: 0.2em 0;
+}
+
+.other-stuff {
+    margin-right: 18vw;
+}
+
+/* Phone adaptations */
+@media only screen and (max-width: 400px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .social-media-container {
+        margin: 0;
+    }
+
+    .other-stuff {
+        margin-top: 10px;
+    }
+}
